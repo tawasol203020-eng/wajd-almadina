@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="وجد المدينة العقارية - خدمات البناء والتشييد المتكاملة">
-    <meta name="theme-color" content="#1e3a8a">
+    <meta name="theme-color" content="#0066cc">
     <title>وجد المدينة العقارية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,175 +20,462 @@
         }
         
         body {
-            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
             overflow-x: hidden;
         }
         
-        .container {
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-nav {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        
+        .nav-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0066cc;
+            flex: 1;
+            margin-right: 1rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .nav-link {
+            padding: 0.5rem 1rem;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #333;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .nav-link:active {
+            background: #0066cc;
+            color: #fff;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: #fff;
+            padding: 2rem 1rem;
             text-align: center;
-            padding: 1.5rem;
-            width: 100%;
-            max-width: 100%;
+            min-height: 50vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
         
-        .logo {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
+        .hero-logo {
+            width: 120px;
+            height: 120px;
             margin-bottom: 1.5rem;
-            aspect-ratio: 1;
-        }
-        
-        .logo img {
-            width: 100%;
-            height: 100%;
             object-fit: contain;
-            max-width: 100%;
         }
         
-        h1 {
-            font-size: clamp(28px, 8vw, 48px);
-            margin-bottom: 0.8rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        .hero h1 {
+            font-size: clamp(24px, 7vw, 42px);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
             line-height: 1.2;
-            word-wrap: break-word;
         }
         
-        p {
-            font-size: clamp(16px, 5vw, 24px);
-            margin-bottom: 2rem;
-            color: #3b82f6;
-            line-height: 1.4;
-        }
-        
-        .nav-buttons {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.8rem;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        @media (min-width: 480px) {
-            .nav-buttons {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                max-width: 500px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .nav-buttons {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.2rem;
-                max-width: 600px;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .nav-buttons {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 1rem;
-                max-width: 1000px;
-            }
-        }
-        
-        .nav-button {
-            display: block;
-            padding: 0.9rem 1.2rem;
-            background-color: rgba(59, 130, 246, 0.2);
-            border: 2px solid #3b82f6;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
+        .hero p {
             font-size: clamp(14px, 4vw, 18px);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #0066cc;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
             transition: all 0.3s ease;
+            border: none;
             cursor: pointer;
-            font-weight: 500;
-            white-space: normal;
-            word-wrap: break-word;
-            text-align: center;
             min-height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
-        .nav-button:active {
-            background-color: #3b82f6;
+        .cta-button:active {
             transform: scale(0.98);
-            box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+            opacity: 0.9;
         }
         
-        @media (hover: hover) {
-            .nav-button:hover {
-                background-color: #3b82f6;
-                transform: translateY(-3px);
-                box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4);
+        /* Services Section */
+        .services {
+            padding: 2rem 1rem;
+            background: #fff;
+        }
+        
+        .section-title {
+            font-size: clamp(20px, 6vw, 32px);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0066cc;
+            text-align: center;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: 640px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
             }
         }
         
-        /* تحسينات للشاشات الصغيرة جداً */
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #0066cc;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .service-card:active {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 102, 204, 0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 16px;
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 2rem 1rem;
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 2rem 1rem;
+            background: #fff;
+        }
+        
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #0066cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            font-size: 14px;
+            color: #0066cc;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        
+        .contact-details p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            background: #0066cc;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:active {
+            transform: scale(0.95);
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 2rem 0;
+        }
+        
+        /* Responsive Adjustments */
         @media (max-width: 360px) {
-            .container {
-                padding: 1rem;
+            nav {
+                padding: 0.8rem;
             }
             
-            .logo {
-                max-width: 200px;
-                margin-bottom: 1rem;
-            }
-            
-            h1 {
-                font-size: 24px;
-                margin-bottom: 0.5rem;
-            }
-            
-            p {
+            .nav-title {
                 font-size: 14px;
-                margin-bottom: 1.5rem;
             }
             
-            .nav-buttons {
-                gap: 0.6rem;
-                padding: 0 0.5rem;
+            .nav-link {
+                padding: 0.4rem 0.8rem;
+                font-size: 11px;
             }
             
-            .nav-button {
-                padding: 0.8rem 1rem;
-                font-size: 13px;
-                border-radius: 6px;
+            .hero {
+                padding: 1.5rem 1rem;
+                min-height: 45vh;
+            }
+            
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .service-card {
+                padding: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="logo.jpeg" alt="شعار وجد المدينة العقارية" loading="lazy">
+    <!-- Navigation -->
+    <nav>
+        <img src="logo.jpeg" alt="Logo" class="logo-nav">
+        <div class="nav-title">وجد المدينة</div>
+        <div class="nav-links">
+            <a href="#services" class="nav-link">الخدمات</a>
+            <a href="#contact" class="nav-link">اتصل</a>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="logo.jpeg" alt="وجد المدينة" class="hero-logo">
         <h1>وجد المدينة العقارية</h1>
         <p>خدمات البناء والتشييد المتكاملة</p>
-        
-        <div class="nav-buttons">
-            <a href="cover.html" class="nav-button">الصفحة الرئيسية</a>
-            <a href="about_us.html" class="nav-button">من نحن</a>
-            <a href="services_overview.html" class="nav-button">خدماتنا</a>
-            <a href="contact_info.html" class="nav-button">اتصل بنا</a>
+        <a href="#services" class="cta-button">استكشف الخدمات</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🏗️ البناء</h3>
+                    <p>خدمات بناء احترافية بأعلى معايير الجودة والسلامة</p>
+                </div>
+                <div class="service-card">
+                    <h3>⚡ الكهرباء</h3>
+                    <p>تركيب وصيانة الأنظمة الكهربائية الحديثة</p>
+                </div>
+                <div class="service-card">
+                    <h3>💧 السباكة</h3>
+                    <p>أعمال السباكة والصرف الصحي بكفاءة عالية</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎨 الدهانات</h3>
+                    <p>دهانات عالية الجودة وتشطيبات احترافية</p>
+                </div>
+                <div class="service-card">
+                    <h3>🪨 السيراميك والرخام</h3>
+                    <p>تركيب السيراميك والرخام والجرانيت</p>
+                </div>
+                <div class="service-card">
+                    <h3>🛋️ الديكورات</h3>
+                    <p>تصميم وتنفيذ ديكورات داخلية عصرية</p>
+                </div>
+                <div class="service-card">
+                    <h3>🧱 الجبس بورد</h3>
+                    <p>أعمال الجبس بورد والتقسيمات الداخلية</p>
+                </div>
+                <div class="service-card">
+                    <h3>🪵 النجارة</h3>
+                    <p>أعمال نجارة وتصنيع الأثاث المخصص</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 الحدادة</h3>
+                    <p>أعمال حدادة وتصنيع الهياكل المعدنية</p>
+                </div>
+                <div class="service-card">
+                    <h3>🪟 الزجاج والألومنيوم</h3>
+                    <p>تركيب النوافذ والأبواب الزجاجية والألومنيوم</p>
+                </div>
+                <div class="service-card">
+                    <h3>🛡️ العزل</h3>
+                    <p>عزل الأسطح والخزانات والجدران</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔧 الصيانة</h3>
+                    <p>خدمات التشغيل والصيانة الدورية والطارئة</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">من نحن</h2>
+            <div class="about-content">
+                <p>نحن مؤسسة وجد المدينة العقارية، متخصصة في تقديم خدمات البناء والتشييد المتكاملة بأعلى معايير الجودة والاحترافية.</p>
+                <p>نمتلك فريقاً من الخبراء والمتخصصين في جميع مجالات البناء والتشييد، ملتزمين بتقديم أفضل الخدمات لعملائنا الكرام.</p>
+                <p>تقع مؤسستنا في المدينة المنورة - العريض - شارع عامر بن سلمة، ونخدم جميع مناطق المدينة المنورة وما حولها.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <h4>الهاتف</h4>
+                        <p>0539106260<br>0550270670</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>البريد الإلكتروني</h4>
+                        <p>WAJDMED2021@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>العنوان</h4>
+                        <p>المدينة المنورة - العريض<br>شارع عامر بن سلمة</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <div class="contact-details">
+                        <h4>وسائل التواصل الاجتماعي</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="TikTok">🎵</a>
+                            <a href="#" class="social-link" title="X">𝕏</a>
+                            <a href="#" class="social-link" title="Snapchat">👻</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 وجد المدينة العقارية</p>
+        <p>جميع الحقوق محفوظة</p>
+    </footer>
 </body>
 </html>
 
