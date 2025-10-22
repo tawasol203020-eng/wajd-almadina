@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معلومات الاتصال - وجد المدينة</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Tajawal', sans-serif;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        color: #ffffff;
+        padding: 2rem;
+      }
+      .page-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .contact-icon {
+        background-color: rgba(59, 130, 246, 0.2);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.5rem;
+        color: #3b82f6;
+        flex-shrink: 0;
+      }
+      .social-icon {
+        background-color: rgba(59, 130, 246, 0.2);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.5rem;
+        color: #3b82f6;
+        transition: all 0.3s ease;
+      }
+      .social-icon:hover {
+        background-color: #3b82f6;
+        color: #ffffff;
+        transform: translateY(-5px);
+      }
+      .logo-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1.5rem;
+      }
+      .logo-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .divider {
+        height: 3px;
+        background: linear-gradient(90deg, rgba(59, 130, 246, 0.7) 0%, rgba(59, 130, 246, 0) 100%);
+        margin: 1.5rem 0;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="page-title">معلومات الاتصال</h1>
+      
+      <div class="grid grid-cols-2 gap-8">
+        <div class="content-box">
+          <div class="logo-container">
+            <img src="/home/ubuntu/wajd_presentation_new/logo.jpeg" alt="شعار وجد المدينة">
+          </div>
+          
+          <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold">وجد المدينة</h2>
+            <p class="text-lg text-blue-300">خدمات البناء والتشييد المتكاملة</p>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt fa-2x"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-1">العنوان</h3>
+              <p class="text-lg">المدينة المنورة - العريض - شارع عامر بن سلمة</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt fa-2x"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-1">الهاتف</h3>
+              <p class="text-lg">0539106260 - 0550270670</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope fa-2x"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-1">البريد الإلكتروني</h3>
+              <p class="text-lg">WAJDMED2021@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col justify-between">
+          <div class="content-box mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-center">تابعونا على وسائل التواصل الاجتماعي</h2>
+            
+            <div class="flex justify-center mb-6">
+              <div class="social-icon">
+                <i class="fab fa-tiktok fa-2x"></i>
+              </div>
+              <div class="social-icon">
+                <i class="fab fa-twitter fa-2x"></i>
+              </div>
+              <div class="social-icon">
+                <i class="fab fa-snapchat-ghost fa-2x"></i>
+              </div>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <h3 class="font-bold mb-2">تيك توك</h3>
+                <p>wajd.med</p>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">منصة X</h3>
+                <p>wajdmed2021@</p>
+              </div>
+              <div>
+                <h3 class="font-bold mb-2">سناب شات</h3>
+                <p>wajdrealestate</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="content-box">
+            <h2 class="text-2xl font-bold mb-4 text-center">ساعات العمل</h2>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg text-center">
+                <h3 class="font-bold mb-2">أيام الأسبوع</h3>
+                <p class="text-lg">من السبت إلى الخميس</p>
+                <p class="text-lg">8:00 صباحاً - 8:00 مساءً</p>
+              </div>
+              
+              <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg text-center">
+                <h3 class="font-bold mb-2">يوم الجمعة</h3>
+                <p class="text-lg">4:00 عصراً - 8:00 مساءً</p>
+              </div>
+            </div>
+            
+            <div class="mt-6 text-center">
+              <p class="text-lg">نسعد بخدمتكم وتلبية جميع احتياجاتكم في مجال البناء والتشييد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
