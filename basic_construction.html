@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات البناء الأساسية - وجد المدينة</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Tajawal', sans-serif;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+      }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        color: #ffffff;
+        padding: 2rem;
+      }
+      .page-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1.5rem;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 100%;
+      }
+      .service-icon {
+        background-color: rgba(59, 130, 246, 0.2);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        color: #3b82f6;
+      }
+      .image-container {
+        width: 100%;
+        height: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .service-item {
+        border-right: 3px solid #3b82f6;
+        padding-right: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .service-item:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <h1 class="page-title">خدمات البناء الأساسية</h1>
+      
+      <div class="grid grid-cols-2 gap-8 h-full">
+        <div class="flex flex-col justify-between">
+          <div class="content-box mb-6">
+            <p class="text-xl mb-4">
+              نقدم في وجد المدينة جميع خدمات البناء الأساسية بدءاً من الأساسات وحتى الهيكل الإنشائي الكامل، مع الالتزام بأعلى معايير الجودة والسلامة.
+            </p>
+          </div>
+          
+          <div class="content-box">
+            <div class="service-item">
+              <div class="flex items-center mb-2">
+                <div class="service-icon ml-4">
+                  <i class="fas fa-building fa-2x"></i>
+                </div>
+                <h3 class="text-2xl font-bold">أعمال البناء</h3>
+              </div>
+              <p class="text-lg">
+                تنفيذ جميع أعمال البناء من الأساسات وحتى الهيكل الإنشائي الكامل، باستخدام أفضل المواد وبأعلى معايير الجودة.
+              </p>
+            </div>
+            
+            <div class="service-item">
+              <div class="flex items-center mb-2">
+                <div class="service-icon ml-4">
+                  <i class="fas fa-bolt fa-2x"></i>
+                </div>
+                <h3 class="text-2xl font-bold">الكهرباء</h3>
+              </div>
+              <p class="text-lg">
+                تنفيذ جميع أعمال التمديدات الكهربائية وفق المخططات المعتمدة وبأعلى معايير السلامة، مع استخدام أجود أنواع الكابلات والمعدات الكهربائية.
+              </p>
+            </div>
+            
+            <div class="service-item">
+              <div class="flex items-center mb-2">
+                <div class="service-icon ml-4">
+                  <i class="fas fa-water fa-2x"></i>
+                </div>
+                <h3 class="text-2xl font-bold">السباكة</h3>
+              </div>
+              <p class="text-lg">
+                تنفيذ جميع أعمال السباكة وتمديدات المياه والصرف الصحي بأجود الخامات، مع ضمان جودة التنفيذ وعدم وجود أي تسريبات.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col">
+          <div class="image-container mb-6">
+            <img src="/home/ubuntu/wajd_presentation_new/images/construction1.jpg" alt="خدمات البناء الأساسية">
+          </div>
+          
+          <div class="content-box">
+            <h3 class="text-2xl font-bold mb-4 text-center">مميزات خدمات البناء لدينا</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-start">
+                <div class="bg-blue-500 rounded-full p-2 ml-3 flex-shrink-0">
+                  <i class="fas fa-check text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">جودة عالية</h4>
+                  <p>استخدام أفضل المواد وأحدث التقنيات</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-500 rounded-full p-2 ml-3 flex-shrink-0">
+                  <i class="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">التزام بالمواعيد</h4>
+                  <p>تنفيذ المشاريع في الوقت المحدد</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-500 rounded-full p-2 ml-3 flex-shrink-0">
+                  <i class="fas fa-users text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">فريق محترف</h4>
+                  <p>مهندسون وفنيون ذوو خبرة عالية</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-500 rounded-full p-2 ml-3 flex-shrink-0">
+                  <i class="fas fa-shield-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">ضمان الجودة</h4>
+                  <p>نقدم ضمان على جميع أعمالنا</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
